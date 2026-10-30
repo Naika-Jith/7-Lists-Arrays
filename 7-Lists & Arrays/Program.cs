@@ -120,33 +120,60 @@ namespace _7_Lists___Arrays
 
             //Count property tells how many times items are in list
 
-            Console.WriteLine(names1[0]); //Firt item
+            Console.WriteLine(names1[0]); //First item
             Console.WriteLine(names1[names1.Count - 1]); //Last item
 
             //You can change the value stored at an index with this line 
 
+            names1[0] = "Arthur";
+            Console.WriteLine(names1[0]);
 
+            //Once List is initialized, we can begin inserting numbers
 
+            List<int> numbers4 = new List<int>();
+            numbers4.Add(1);
+            numbers4.Add(2);
+            numbers4.Add(3);
 
+            //We can also add a whole array to a list
+            List<int>numbers5 = new List<int>();
+            int[] array = new int[] { 1, 2, 3, };
+            numbers4.AddRange(array);
 
+            //Use Remove to Remove an item
+            List<string> fruits = new List<string>();
+            // add fruits
+            fruits.Add("apple");
+            fruits.Add("banana");
+            fruits.Add("orange");
 
+            //Now remove the banana
+            fruits.Remove("banana");
+            Console.WriteLine(fruits.Count);
 
+            //We can use AddRange to join between lists
+            List<string> food = new List<string>();
+            food.Add("apple");
+            food.Add("banana");
 
+            List<string> vegetables = new List<string>();
+            vegetables.Add("tomato");
+            vegetables.Add("carrot");
 
+            food.AddRange(vegetables);
+            Console.WriteLine(food.Count);
 
+            // Contains(T) determines whether an elements in the list<T>
+            //Add Range Adds the elements of the specified collection to the end of the List
 
+           
+            //Here is for loop that you can use to iterate through names
+          //  for (int i = 0; i < names.Count; i++)
+          //Console.WriteLine(names[i]);
 
-
-
-
-
-
-
-
-
-
-
-
+            //You can also use a foreach loop to iterate though a list
+            //foreach (string name in names)
+            //Console.WriteLine(name);
 
         }
     }
